@@ -103,25 +103,52 @@ class Duck implements Fly,Swim
     }
 }
 
+//super and this methods.
+
+class A  //each class in java by default extends Object class i.(class A extends Object) but even if we don't mention it, it's still there.
+{
+    public A(){
+        System.out.println("In Default Constructor A");
+    }
+    public A(int num){
+        this();
+        System.out.println("In Parameterized Constructor A");
+    }
+}
+
+class B extends A
+{
+    public B(){
+        super(5); //By default each constructor has super() method which is executed as first line. super() method calls Default construcor of super class (parent class). if we pass any parameter then it calls parameterized constructor super(5).
+        System.out.println("In Default Constructor B");
+    }
+    public B(int num){
+        this(); //this() method calls the Default constructor of the same class first.
+        System.out.println("In Parameterized Constructor B");
+    }
+}
+
 public class Inheritance
 {
     public static void main(String[] args)
     {
-        Dog d = new Dog();
-        d.display();
-        d.sound();
+        B obj = new B(5);
+        
+        // Dog d = new Dog();
+        // d.display();
+        // d.sound();
 
-        Puppy p = new Puppy();
-        p.show();
-        p.sound();
+        // Puppy p = new Puppy();
+        // p.show();
+        // p.sound();
 
-        Cat c = new Cat();
-        c.display();
-        c.sound();
+        // Cat c = new Cat();
+        // c.display();
+        // c.sound();
 
-        Duck du = new Duck();
-        du.flying();
-        du.swimming();
+        // Duck du = new Duck();
+        // du.flying();
+        // du.swimming();
 
     }
 }
