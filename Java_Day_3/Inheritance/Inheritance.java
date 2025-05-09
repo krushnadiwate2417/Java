@@ -132,23 +132,23 @@ public class Inheritance
 {
     public static void main(String[] args)
     {
-        B obj = new B(5);
+        B obj = new B();
         
-        // Dog d = new Dog();
-        // d.display();
-        // d.sound();
+        Dog d = new Dog();
+        d.display();
+        d.sound();
 
-        // Puppy p = new Puppy();
-        // p.show();
-        // p.sound();
+        Puppy p = new Puppy();
+        p.show();
+        p.sound();
 
-        // Cat c = new Cat();
-        // c.display();
-        // c.sound();
+        Cat c = new Cat();
+        c.display();
+        c.sound();
 
-        // Duck du = new Duck();
-        // du.flying();
-        // du.swimming();
+        Duck du = new Duck();
+        du.flying();
+        du.swimming();
 
     }
 }
