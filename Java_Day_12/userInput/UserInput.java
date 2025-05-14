@@ -27,6 +27,7 @@ public class UserInput {
         
         // 2.
         //Using Scanner of util class.
+        //Scanner was introduced after java 1.5 .
         
         System.out.println("Enter A Number for Scanner : ");
         Scanner sc = new Scanner(System.in);
